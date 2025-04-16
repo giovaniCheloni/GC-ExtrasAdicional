@@ -23,7 +23,11 @@ const App = () => {
             headerTitleStyle: { fontSize: 30, color: 'purple' },
           }}
         />
-        <Stack.Screen name="Inicial" component={Inicial} />
+        <Stack.Screen name="Inicial" component={Inicial} 
+        options={{
+          title: null,
+        }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

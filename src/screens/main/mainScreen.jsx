@@ -36,7 +36,7 @@ const MainScreen = () => {
       <TextInput
         style={styles.input}
         placeholder="Salário Base"
-        placeholderTextColor="white"
+        placeholderTextColor="white"      
         keyboardType="numeric"
         value={salarioBase}
         onChangeText={setSalarioBase}

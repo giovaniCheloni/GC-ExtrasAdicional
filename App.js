@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import MainScreen from './src/screens/main/mainScreen.jsx';
+import Inicial from './src/screens/inicial/inicial.jsx'; // Adjust the path as necessary
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Inicial">
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+        <Stack.Screen name="Main" component={MainScreen}
+        headerBackButtonLabel="Voltar"
+          options={{
+            title: 'GC - Extras & Adicional',
+            headerStyle: { backgroundColor: 'white' },
+            headerTintColor: 'purple',
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTitleAlign: 'center',
+            headerTitleStyle: { fontSize: 30, color: 'purple' },
+          }}
+        />
+        <Stack.Screen name="Inicial" component={Inicial} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;

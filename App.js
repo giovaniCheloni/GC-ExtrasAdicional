@@ -21,11 +21,13 @@ const App = () => {
             headerTitleStyle: { fontWeight: 'bold' },
             headerTitleAlign: 'center',
             headerTitleStyle: { fontSize: 30, color: 'purple' },
+            animation: 'slide_from_right',
           }}
         />
         <Stack.Screen name="Inicial" component={Inicial} 
-        options={{
-          title: null,
+        options={{       
+          animation: 'slide_from_left',   
+          headerShown: false,
         }}
         />
       </Stack.Navigator>

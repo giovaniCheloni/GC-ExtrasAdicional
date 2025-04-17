@@ -2,6 +2,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { COLORS } from './src/constants/colors.js';
 import MainScreen from './src/screens/main/mainScreen.jsx';
 import Inicial from './src/screens/inicial/inicial.jsx'; // Adjust the path as necessary
 
@@ -16,11 +17,11 @@ const App = () => {
         headerBackButtonLabel="Voltar"
           options={{
             title: 'GC - Extras & Adicional',
-            headerStyle: { backgroundColor: 'white' },
-            headerTintColor: 'purple',
+            headerStyle: { backgroundColor: COLORS.DarkBlue },
+            headerTintColor: COLORS.Golden,
             headerTitleStyle: { fontWeight: 'bold' },
             headerTitleAlign: 'center',
-            headerTitleStyle: { fontSize: 30, color: 'purple' },
+            headerTitleStyle: { fontSize: 30, color: COLORS.Golden },
             animation: 'slide_from_right',
           }}
         />
